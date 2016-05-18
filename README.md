@@ -1,3 +1,3 @@
 # condominio
 Estudando Spring Boot. 
-Código baseado no Workshop de Spring Boot da AlgaWorks
+Código baseado no Workshop online de Spring Boot da AlgaWorks.
