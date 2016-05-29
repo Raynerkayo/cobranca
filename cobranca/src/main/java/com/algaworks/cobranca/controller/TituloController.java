@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.algaworks.cobranca.model.StatusTitulo;
 import com.algaworks.cobranca.model.Titulo;
-import com.algaworks.cobranca.repository.Titulos;
+import com.algaworks.cobranca.repository.filter.TituloFilter;
 import com.algaworks.cobranca.service.CadastroTituloService;
 
 @Controller
@@ -26,10 +27,6 @@ public class TituloController {
 	private static final String CADASTRO_VIEW = "CadastroTitulo";
 	private static final String PESQUISA_VIEW = "PesquisaTitulo";
 
-	// Para criar uma instancia de Titulos
-	@Autowired
-	private Titulos titulos;
-	
 	@Autowired
 	private CadastroTituloService cadastroTituloService;
 
@@ -61,8 +58,10 @@ public class TituloController {
 	}
 
 	@RequestMapping
-	public ModelAndView pesquisar() {
-		List<Titulo> todosTitulos = titulos.findAll();
+	public ModelAndView pesquisar(@ModelAttribute("filtro") TituloFilter tituloFilter){
+		//@ModelAttribute("filtro") envio p o th:object
+		List<Titulo> todosTitulos = cadastroTituloService.filtrar(tituloFilter);
+		
 		ModelAndView modelAndView = new ModelAndView(PESQUISA_VIEW);
 		modelAndView.addObject("titulos", todosTitulos);
 		return modelAndView;
@@ -90,5 +89,13 @@ public class TituloController {
 		attributes.addFlashAttribute("mensagem", "Título excluído com sucesso!");
 		return "redirect:/titulos";
 	}
+	
+	// Método para usar o Ajax. @ResponseBody é para spring identificar que naão será retornado uma view e sim o corpo da resposta
+	@RequestMapping(value = "/{codigo}/receber", method = RequestMethod.PUT)
+	public @ResponseBody String receber(@PathVariable Long codigo){
+		return cadastroTituloService.receber(codigo);
+	}
+	
+	
 
 }

@@ -31,7 +31,7 @@
 					</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="descricao" th:field="*{descricao}" />
-							<!-- *{fieldDoObjetoTituloAcima} th:field é convertido para name-->
+							<!-- *{fieldDoObjetoTituloAcima} th:field é convertido para name, ele mantém os dados no form para ir para a edição-->
 					</div>
 				</div>
 
@@ -61,7 +61,7 @@
 						Status
 					</label>
 					<div class="col-sm-2">
-						<select class="form-control" name="status">
+						<select class="form-control" name="status" th:field="*{status}">
 							<option th:each="status : ${todosStatusTitulo}"
 								th:value="${status}" th:text="${status.descricao}"></option>
 						</select>
