@@ -26,5 +26,13 @@ $(function(){
 	//carregada a página, encontre as classe .js-currency
 	$('.js-currency').maskMoney({decimal: ',', thousands: '.', allowZero: true});
 	
+	$('.js-atualizar-status').on('click', function(event){
+		event.preventDefault();
+		
+		var botaoReceber = $(event.currentTarget);
+		var urlReceber = botaoReceber.attr('href');
+		
+		alert('urlReceber', urlReceber);
 	
+	});
 });
