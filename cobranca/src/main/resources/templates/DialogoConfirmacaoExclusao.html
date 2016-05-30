@@ -5,7 +5,7 @@
 	<!-- data-keyboard="false" data-backdrop="static" para forçar o usuário a clicar no botão para uma ação no modal, caso aperte ESC ou fora do modal, a ação é inibida -->
 	<div class="modal fade" id="confirmacaoExclusaoModal" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog">
-			<form th:attr="data-url-base='/titulos'" method="POST">
+			<form th:attr="data-url-base=@{/titulos}" method="POST">
 			<input type="hidden" name="_method" value="DELETE"/>	
 			
 				<div class="modal-content">
