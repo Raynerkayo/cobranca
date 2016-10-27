@@ -93,7 +93,7 @@ public class TituloController {
 	// Método para usar o Ajax. @ResponseBody é para spring identificar que naão será retornado uma view e sim o corpo da resposta
 	@RequestMapping(value = "/{codigo}/receber", method = RequestMethod.PUT)
 	public @ResponseBody String receber(@PathVariable Long codigo){
-		return cadastroTituloervice.receber(codigo);
+		return cadastroTituloService.receber(codigo);
 	}
 	
 	
