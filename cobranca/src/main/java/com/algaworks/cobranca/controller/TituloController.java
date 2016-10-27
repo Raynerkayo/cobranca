@@ -1,6 +1,6 @@
 package com.algaworks.cobranca.controller;
 
-import java.util.Arrys;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
