@@ -1,3 +1,3 @@
 # Cobrança
 Estudando Spring Boot. 
-Código baseado no Workshop online de Spring Boot da AlgaWorks. Entrega.
+Código baseado no Workshop online de Spring Boot da AlgaWorks. Codacy.
