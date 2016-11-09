@@ -90,8 +90,42 @@
 					<password>admin</password>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+				    <execution>
+					<goals>
+					    <goal>check</goal>
+					</goals>
+				    </execution>
+				</executions>
+			</plugin>
+			
 		</plugins>
 	</build>
+	 <reporting>
+		<plugins>
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jxr-plugin</artifactId>
+			<version>2.3</version>
+		    </plugin>
+
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.0.1</version>
+			<configuration>
+			    <targetJdk>1.6</targetJdk>
+			    <!--<rulesets>-->
+			    <!--<ruleset>pmd_rules.xml</ruleset>-->
+			    <!--</rulesets>-->
+			</configuration>
+		    </plugin>
+		</plugins>
+	</reporting>
 
 
 </project>
