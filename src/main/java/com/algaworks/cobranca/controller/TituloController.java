@@ -32,7 +32,8 @@ public class TituloController {
 
 	// new Titulo, é para passar o objeto para a view
 	@RequestMapping("/novo")
-	public ModelAndView novo() {
+	public ModelAndView novo() 
+	{
 		ModelAndView modelAndView = new ModelAndView(CADASTRO_VIEW);
 		modelAndView.addObject(new Titulo());
 		return modelAndView;
