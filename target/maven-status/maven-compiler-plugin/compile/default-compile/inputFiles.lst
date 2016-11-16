@@ -1,8 +1,8 @@
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/service/CadastroTituloService.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/repository/Titulos.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/model/Titulo.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/ServletInitializer.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/CobrancaApplication.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/controller/TituloController.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/repository/filter/TituloFilter.java
-/home/rayner/git/cobranca/cobranca/src/main/java/com/algaworks/cobranca/model/StatusTitulo.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/model/StatusTitulo.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/repository/filter/TituloFilter.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/model/Titulo.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/CobrancaApplication.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/controller/TituloController.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/ServletInitializer.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/repository/Titulos.java
+/home/rayner/git/cobranca/src/main/java/com/algaworks/cobranca/service/CadastroTituloService.java

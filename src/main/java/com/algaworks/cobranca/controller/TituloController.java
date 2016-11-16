@@ -23,7 +23,6 @@ import com.algaworks.cobranca.service.CadastroTituloService;
 @Controller
 @RequestMapping("/titulos")
 public class TituloController {
-
 	private static final String CADASTRO_VIEW = "CadastroTitulo";
 	private static final String PESQUISA_VIEW = "PesquisaTitulo";
 

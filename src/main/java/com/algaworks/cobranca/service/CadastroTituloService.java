@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.cobranca.model.StatusTitulo;
 import com.algaworks.cobranca.model.Titulo;
@@ -16,6 +17,7 @@ import com.algaworks.cobranca.repository.filter.TituloFilter;
  * quando necessárias.
 */
 @Service
+@Transactional
 public class CadastroTituloService {
 
 	@Autowired
@@ -45,6 +47,8 @@ public class CadastroTituloService {
 		return titulos.findByDescricaoContaining(descricao);
 	}
 	
-	
+	public Titulo buscarPorDescricao(String titulo){
+		return titulos.findByDescricao(titulo);
+	}
 	
 }

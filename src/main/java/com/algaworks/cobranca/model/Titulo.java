@@ -33,7 +33,6 @@ public class Titulo {
 
 	@NotNull(message="Data de vencimento é obrigatória.")
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	// pegar só a data
 	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
 
