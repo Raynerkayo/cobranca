@@ -100,7 +100,7 @@ public class CobrancaApplicationTests {
 		
 		Titulo titulo = service.buscarPorId(42L);
 		
-		assertEquals("Jacqueline", titulo.getDescricao());
+		assertEquals("JacquelineSS", titulo.getDescricao());
 		assertEquals("Recebido", titulo.getStatus().getDescricao());
 		assertEquals(new BigDecimal("52.00"), titulo.getValor());
 	}
