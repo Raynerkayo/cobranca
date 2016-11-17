@@ -42,13 +42,17 @@ public class CadastroTituloService {
 		return StatusTitulo.RECEBIDO.getDescricao();
 	}
 	
+	public Titulo buscarPorId(Long codigo){
+		return titulos.findOne(codigo);
+	}
+	
 	public List<Titulo> filtrar(TituloFilter tituloFilter){
 		String descricao = tituloFilter.getDescricao() == null ? "%" : tituloFilter.getDescricao();
 		return titulos.findByDescricaoContaining(descricao);
 	}
 	
-	public Titulo buscarPorDescricao(String titulo){
-		return titulos.findByDescricao(titulo);
+	public List<Titulo> buscarPorDescricao(String titulo){
+		return titulos.findByDescricaoLike(titulo);
 	}
 	
 }

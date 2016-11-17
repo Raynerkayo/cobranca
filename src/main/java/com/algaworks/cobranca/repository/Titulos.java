@@ -15,6 +15,6 @@ public interface Titulos extends JpaRepository<Titulo, Long> {
 	
 	public List<Titulo> findByDescricaoContaining(String descricao);
 	
-	Titulo findByDescricao(String titulo);
-	
+	List<Titulo> findByDescricaoLike(String titulo);
+
 }
